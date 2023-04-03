@@ -2,6 +2,8 @@ import React from 'react'
 import Link from 'next/link'
 import Logo from './Logo'
 import { useRouter } from 'next/router'
+import { EmailIcon, GithubIcon, LinkedInIcon } from './Icons'
+import { motion } from 'framer-motion'
 
 const CustomLink = ({ href, title }) => {
     const router = useRouter();
@@ -26,7 +28,7 @@ const CustomLink = ({ href, title }) => {
 
 const Navbar = () => {
     return (
-        <header className='w-full px-32 py-8 font-medium flex items-center justify-between'>       
+        <header className='w-full px-32 py-9 font-medium flex items-center justify-between border-solid border-b-[2.5px]'>       
             <nav className='flex gap-4'>
                 <CustomLink href='/' title='Home'/>
                 <CustomLink href='/about' title='About'/>
@@ -34,18 +36,20 @@ const Navbar = () => {
                 <CustomLink href='/articles' title='Articles'/>
             </nav>
 
-            <Logo />
+            <div className='absolute left-[50%] top-2 translate-x-[-50%]'>
+                <Logo />
+            </div>
 
-            <nav className='flex gap-4'>
-                <Link href='/' target={"_blank"}>Hold</Link>
-                <Link href='/' target={"_blank"}>Hold</Link>
-                <Link href='/' target={"_blank"}>Hold</Link>
-                <Link href='/' target={"_blank"}>Hold</Link>
-                <Link href='/' target={"_blank"}>Hold</Link>
+            <nav className='flex gap-4 items-center justify-center flex-wrap'>
+                <motion.a href='/' target={"_blank"} whileHover={{y: -3}} whileTap={{scale: 0.9}}>
+                    <GithubIcon />
+                </motion.a>
+                <motion.a href='/' target={"_blank"} whileHover={{y: -3}} whileTap={{scale: 0.9}}>
+                    <LinkedInIcon />
+                </motion.a>
             </nav>
         </header>
     )
-
 }
 
 export default Navbar

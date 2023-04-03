@@ -13,6 +13,9 @@ module.exports = {
     extend: {
       fontFamily: {
         mont: ['var(--font-mont)', ...fontFamily.sans]
+      },
+      animation: {
+        'spin-slow': 'spin 7s linear infinite',
       }
     },
     colors: {
