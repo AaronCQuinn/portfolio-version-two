@@ -6,6 +6,7 @@ import Image from 'next/image'
 import HeroImage from '../../public/Qwinny_front-on_realistic_headshot_attractive_smiling_full_bear_132e6df7-9b94-4fe9-be2c-f4b94fc03006.png'
 import { AnimatedNumbers } from '../compnents/AnimatedNumbers'
 import Skills from '@/compnents/Skills'
+import Experience from '@/compnents/Experience'
 
 const about = () => {
     
@@ -62,6 +63,7 @@ const about = () => {
                     </div>
                 </div>
                 <Skills />
+                <Experience />
             </Layout>
         </main>
     

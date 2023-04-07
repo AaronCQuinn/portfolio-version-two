@@ -4,7 +4,7 @@ import AnimatedText from './AnimatedText'
 
 const Skills = () => {
   return (
-    <div className='mt-32'>
+    <div className='mt-64'>
         <AnimatedText text='The Technologies I love' className='mb-16'/>
 
         <div className='grid grid-cols-2 gap-4'>
