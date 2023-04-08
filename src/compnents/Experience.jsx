@@ -4,7 +4,11 @@ import { useScroll, motion } from 'framer-motion'
 const Details = ({ position, company, companyLink, time, address, work }) => {
     return (
         <li className='my-8 first:mt-0 last:mb-0 mx-auto flex flex-col items-center justify-between min-w-full'>
-            <div className='w-full '>
+            <motion.div className='w-full '
+            initial={{y:50}}
+            whileInView={{y:0}}
+            trainsition={{duration: .5, type: "spring"}}
+            >
                 <h3 className='capitalize font-bold text-2xl flex justify-between items-center'>{position}&nbsp;
                 <span className='capitalize text-linkBlue'>
                     @
@@ -24,7 +28,7 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
                         )
                     })}
                 </ul>
-            </div>
+            </motion.div>
         </li>
     )
 }
@@ -36,7 +40,7 @@ const Experience = () => {
     return (
         <div className='my-64 flex flex-col justify-center items-center'>
             <h2 className='font-bold text-8xl mb-32 w-full text-center'>
-                Experience
+                What I've Been Up To
             </h2>
 
             <div ref={ref} className='w-full relative flex flex-col items-center'>
@@ -71,7 +75,7 @@ const Experience = () => {
                     <Details 
                         position={"Bachelor of Commerce (Co-op)"} 
                         company={"MUN"}
-                        address={"Morrissey Rd"}
+                        address={"Memorial University of Newfoundland"}
                         time={"2015-2020"}
                         work={["Pursued work placements in all sectors: Private, Public, and Not-for-profit", "Completed accounting major", ]}
                         companyLink={"https://www.mun.ca/business/"}
