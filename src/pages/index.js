@@ -21,7 +21,7 @@ export default function Home() {
   }
 
   return (
-    <main className="flex items-center text-dark w-full min-h-screen">
+    <main className="flex items-center text-dark w-full min-h-screen dark:text-light">
       <Layout className="pt-0">
         <div className="flex items-center w-full">
 
@@ -50,11 +50,11 @@ export default function Home() {
           </p>
 
           <div className="flex items-center self-start mt-2 gap-4">
-            <Link href='/AARON_QUINN_RESUME.pdf' target={"_blank"} className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark transition">
+            <Link href='/AARON_QUINN_RESUME.pdf' target={"_blank"} className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light dark:bg-light dark:text-dark transition">
               My Resume
             </Link>
 
-            <Link href="mailto:aaron.quinn.nfld@gmail.com" target={"_blank"} className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark transition">
+            <Link href="mailto:aaron.quinn.nfld@gmail.com" target={"_blank"} className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light dark:bg-light dark:text-dark transition">
               Email Me
             </Link>
           </div>

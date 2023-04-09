@@ -3,6 +3,7 @@ import { Montserrat } from 'next/font/google';
 import Navbar from '@/compnents/Navbar';
 import Head from 'next/head';
 import '@/styles/checkmark.css'
+import { ThemeContextProvider } from '@/context/ThemeContext';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -25,12 +26,14 @@ export default function App({ Component, pageProps }) {
     // Important 
     <>
       <Head>
-        <title>Create Next App</title>
+        <title>Aaron Quinn | Portfolio</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <main className={`${montserrat.variable} font-mont bg-light w-full min-h-screen`}>
-        <Navbar />
-        <Component {...pageProps} />
+      <main className={`${montserrat.variable} dark:bg-dark font-mont bg-light w-full min-h-screen`}>
+        <ThemeContextProvider>
+          <Navbar />
+          <Component {...pageProps} />
+        </ThemeContextProvider>
       </main>
     </>
   )
