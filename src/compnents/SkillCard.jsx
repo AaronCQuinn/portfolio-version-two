@@ -3,7 +3,7 @@ import { useInView } from 'framer-motion';
 import { motion } from 'framer-motion';
 import { ThemeContext } from '@/context/ThemeContext';
 
-const SkillCard = ({ text, className='', circleFill, checkmarkFill, borderFill }) => {
+const SkillCard = ({ text, className='' }) => {
     const { theme } = useContext(ThemeContext);
     const ref = useRef(null);
     const isInView = useInView(ref, {once: true});
@@ -23,7 +23,7 @@ const SkillCard = ({ text, className='', circleFill, checkmarkFill, borderFill }
     }
 
   return (
-    <div className={`flex bg-dark h-full border-2 border-dark p-6 items-center gap-2 w-2/4 ${className} dark:bg-light`}>
+    <div className={`flex bg-dark h-full border-2 border-dark p-6 items-center gap-2 w-2/4 ${className} dark:bg-light xl:w-full`}>
         <div ref={ref} className='animation-ctn'>
             <div className={isInView ? "icon icon--order-success svg" : ""}>
             <svg xmlns="http://www.w3.org/2000/svg" width="38.5px" height="38.5px" >

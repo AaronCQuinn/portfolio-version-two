@@ -19,6 +19,14 @@ module.exports = {
         'spin-slow': 'spin 7s linear infinite',
       }
     },
+    screens: {
+      "2x": { max: "1535px"},
+      xl: { max: "1279px" },
+      lg: { max: "1023px" },
+      md: { max: "767px" },
+      sm: { max: "639px" },
+      xs: { max: "479px" },
+    },
     colors: {
       dark: "#1b1b1b",
       light: "#f5f5f5",

@@ -3,26 +3,26 @@ import { useScroll, motion } from 'framer-motion'
 
 const Details = ({ position, company, companyLink, time, address, work }) => {
     return (
-        <li className='my-8 first:mt-0 last:mb-0 mx-auto flex flex-col items-center justify-between min-w-full'>
+        <li className='my-8 first:mt-0 last:mb-0 mx-auto flex flex-col items-center justify-between min-w-full md:w-[80%]'>
             <motion.div className='w-full '
             initial={{y:50}}
             whileInView={{y:0}}
             trainsition={{duration: .5, type: "spring"}}
             >
-                <h3 className='capitalize font-bold text-2xl flex justify-between items-center dark:text-light'>{position}&nbsp;
+                <h3 className='capitalize font-bold text-2xl flex justify-between items-center dark:text-light sm:text-xl xs:text-lg'>{position}&nbsp;
                 <span className='capitalize dark:text-light text-dark/50'>
                     @
                     <a href={companyLink} className='hover:underline'>{company}</a>
                 </span>
                 </h3>
-                <span className='capitalize font-medium text-dark/75 dark:text-light/75'>
+                <span className='capitalize font-medium text-dark/75 dark:text-light/75 xs:text-sm'>
                     {time} | {address}
                 </span>
 
                 <ul className='list-disc'>
                     {work.map((item, index) => {
                         return (
-                        <li className='font-medium w-full dark:text-light/75' key={index}>
+                        <li className='font-medium w-full dark:text-light/75 md:text-sm' key={index}>
                             {item}
                         </li>
                         )
@@ -38,15 +38,15 @@ const Experience = () => {
     const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "-200px start"] });
 
     return (
-        <div className='my-64 flex flex-col justify-center items-center'>
-            <h2 className='font-bold text-8xl mb-32 w-full text-center dark:text-light'>
+        <div className='my-64 lg:my-32 flex flex-col justify-center items-center'>
+            <h2 className='font-bold text-8xl mb-32 w-full text-center dark:text-light lg:mb-8 lg:!text-6xl sm:!text-4xl xs:!text-2xl'>
                 What I've Been Up To
             </h2>
 
             <div ref={ref} className='w-full relative flex flex-col items-center'>
 
                 <motion.div 
-                className='absolute left-8 top-0 w-[4px] h-full bg-dark origin-top dark:bg-light'
+                className='absolute left-8 md:w-[2px] lg:left-6 md:left-4 sm:left-2 top-0 w-[4px] h-full bg-dark origin-top dark:bg-light'
                 style={{scaleY: scrollYProgress}}
                 />
 

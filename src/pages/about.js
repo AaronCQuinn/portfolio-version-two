@@ -19,11 +19,11 @@ const about = () => {
 
         <main className='flex w-full flex-col items-center justify-center'>
             <Layout className='pt-16'>
-                <AnimatedText text='Lorem Ipsum Placeholder' className='mb-16'/>
+                <AnimatedText text='Lorem Ipsum Placeholder' className='mb-16 lg:mb-8 lg:!text-6xl sm:!text-4xl xs:!text-2xl '/>
 
-                <div className='grid w-full grid-cols-8 gap-16'>
+                <div className='grid w-full grid-cols-8 gap-16 sm:gap-8'>
 
-                    <div className='col-span-3 flex flex-col justify-start'>
+                    <div className='col-span-3 xl:col-span-4 flex flex-col justify-start md:order-2 md:col-span-8'>
                         <h2 className='mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75'>
                             About Me
                         </h2>
@@ -38,26 +38,26 @@ const about = () => {
                         </p>
                     </div>
                     
-                    <div className='justify-center col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8 dark:bg-dark dark:border-light'>
+                    <div className='justify-center md:order-1 md:col-span-8 col-span-3 xl:col-span-4 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8 dark:bg-dark dark:border-light'>
                         <div className='absolute top-0 -right-2 -z-10 w-[102%] h-[101.5%] rounded-3xl bg-dark dark:bg-light'/>
                         <Image src={HeroImage} alt='Aaron Quinn' className='w-full h-auto rounded-2xl' />
                     </div>
 
-                    <div className='col-span-2 flex flex-col items-center justify-between'>
+                    <div className='col-span-2 xl:col-span-8 xl:flex-row flex flex-col items-center justify-between md:order-3'>
                 
-                        <div className='flex flex-col items-center justify-center'>
-                            <span className='inline-block text-7xl font-bold dark:text-light'><AnimatedNumbers className='dark:text-light' value={10}/>+</span>
-                            <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light/75'>projects completed</h2>
+                        <div className='flex flex-col items-center justify-center xl:items-center'>
+                            <span className='inline-block text-7xl md:text-6xl sm:text-5xl xs:text-4xl font-bold dark:text-light'><AnimatedNumbers className='dark:text-light' value={10}/>+</span>
+                            <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light text-center'>projects completed</h2>
                         </div>
 
                         <div className='flex flex-col items-center justify-center'>
-                            <span className='inline-block text-7xl font-bold dark:text-light'><AnimatedNumbers value={3} className='dark:text-light' />+</span>
-                            <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light'>Local Mentors</h2>
+                            <span className='inline-block text-7xl md:text-6xl sm:text-5xl xs:text-4xl font-bold dark:text-light'><AnimatedNumbers value={3} className='dark:text-light' />+</span>
+                            <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light text-center'>Local Mentors</h2>
                         </div>
 
                         <div className='flex flex-col items-center justify-center'>
-                            <span className='inline-block text-7xl font-bold dark:text-light'><AnimatedNumbers value={2} className='dark:text-light'/>+</span>
-                            <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light'>years of experience</h2>
+                            <span className='inline-block text-7xl md:text-6xl sm:text-5xl xs:text-4xl font-bold dark:text-light'><AnimatedNumbers value={2} className='dark:text-light'/>+</span>
+                            <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light text-center'>years of experience</h2>
                         </div>
 
                     </div>

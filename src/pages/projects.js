@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Head from 'next/head'
 import Layout from '@/compnents/Layout'
 import AnimatedText from '@/compnents/AnimatedText'
@@ -8,16 +8,22 @@ import project1 from '../../public/8OakmxU.png'
 import project2 from '../../public/qp2SeTunY2UCMGVHlKL8T2amFju1-219_1243268_01.jpeg'
 import project3 from '../../public/s5CW7qY.png'
 import { motion } from 'framer-motion'
+import { ThemeContext } from '@/context/ThemeContext'
 
 const FeaturedProject = ({ type, title, summary, img, link, ghLink }) => {
+    const { theme } = useContext(ThemeContext);
     return (
         <article className='w-full flex items-center justify-between rounded-3xl border border-solid 
         border-dark bg-light shadow-2xl p-2 relative rounded-br-3xl
         dark:border-light
         dark:bg-dark
+        lg:flex-col
+        lg:p-8
+        xs:rounded-2xl
+        xs:rounded-br-3xl
         '>
             <div className='absolute top-0 -right-2 -z-10 w-[100.5%] h-[102%] rounded-[1.8rem] bg-dark dark:bg-light'/>
-            <Link className='w-1/2 cursor-pointer overflow-hidden rounded-3xl' href={link} target={'_blank'}>
+            <Link className='w-1/2 cursor-pointer overflow-hidden rounded-3xl mb-2' href={link} target={'_blank'}>
                 <motion.img whileHover={{scale: .98}} src={img.src} alt={title} className='w-full h-auto rounded-3xl'               
                 priority
                 sizes="(max-width: 768px) 100vw,
@@ -38,7 +44,7 @@ const FeaturedProject = ({ type, title, summary, img, link, ghLink }) => {
 
                 <div className='mt-2 flex items-center'>
                     <Link href={ghLink} target={'_blank'} className='w-10'>
-                        <GithubIcon />
+                        <GithubIcon bgFill={theme === 'dark' ? "#fff" : "#121212"}/>
                     </Link>
                     <Link href={link} target={'_blank'} className='ml-4 
                     rounded 
@@ -68,6 +74,7 @@ const FeaturedProject = ({ type, title, summary, img, link, ghLink }) => {
 }
 
 const Project = ({ title, type, img, link, summary, ghLink }) => {
+    const { theme } = useContext(ThemeContext);
     return (
         <article className='w-full flex flex-col items-center just rounded-2xl border border-solid border-dark bg-light p-6 relative dark:bg-dark dark:border-light'>
             <div className='absolute top-0 -right-2 -z-10 w-[100.5%] h-[101%] rounded-3xl bg-dark dark:bg-light'/>
@@ -88,7 +95,7 @@ const Project = ({ title, type, img, link, summary, ghLink }) => {
 
                 <div className='mt-2 flex items-center justify-between'>
                     <Link href={ghLink} target={'_blank'} className='w-8'>
-                        <GithubIcon />
+                        <GithubIcon bgFill={theme === 'dark' ? "#fff" : "#121212"}/>
                     </Link>
                     <Link href={link} target={'_blank'} className='ml-4 rounded font-semibold underline dark:text-light'>
                         Visit Project
@@ -109,9 +116,9 @@ const projects = () => {
 
         <main className='w-full flex flex-col items-center justify-center'>
             <Layout>
-                <AnimatedText text={"My Recent Works"} className='mb-16'/>
+                <AnimatedText text={"My Recent Works"} className='mb-16 !text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl'/>
                 
-                <div className="grid grid-cols-12 gap-24">
+                <div className="grid grid-cols-12 gap-24 lg:gap-x-16 md:gap-x-8 md:gap-y-24 sm:gap-x-0">
                     
                     <div className='col-span-12'>
                         <FeaturedProject 
@@ -124,7 +131,7 @@ const projects = () => {
                         />
                     </div>
 
-                    <div className='col-span-6'>
+                    <div className='col-span-6 lg:col-span-12'>
                         <Project 
                             title={'Housing Classifieds'}
                             summary={"A React application developed with a mobile-first view, alongside of Firebase V9. Users may authenticate via their Google account and then proceed to post, view, and contact others about their housing offers."}
@@ -134,7 +141,7 @@ const projects = () => {
                         />
                     </div>
 
-                    <div className='col-span-6'>
+                    <div className='col-span-6 lg:col-span-12'>
                         <Project 
                             title={"Aaron's Adoptions"}
                             summary={"A mock adoption services website where the administrators to the website can easily control the flow of incoming and out going foster animals. Heavy focus on backend functionality in this project."}
