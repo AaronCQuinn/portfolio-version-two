@@ -9,20 +9,20 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
             whileInView={{y:0}}
             trainsition={{duration: .5, type: "spring"}}
             >
-                <h3 className='capitalize font-bold text-2xl flex justify-between items-center'>{position}&nbsp;
-                <span className='capitalize text-linkBlue'>
+                <h3 className='capitalize font-bold text-2xl flex justify-between items-center dark:text-light'>{position}&nbsp;
+                <span className='capitalize dark:text-light text-dark/50'>
                     @
-                    <a href={companyLink} className=' hover:underline'>{company}</a>
+                    <a href={companyLink} className='hover:underline'>{company}</a>
                 </span>
                 </h3>
-                <span className='capitalize font-medium text-dark/75'>
+                <span className='capitalize font-medium text-dark/75 dark:text-light/75'>
                     {time} | {address}
                 </span>
 
                 <ul className='list-disc'>
                     {work.map((item, index) => {
                         return (
-                        <li className='font-medium w-full' key={index}>
+                        <li className='font-medium w-full dark:text-light/75' key={index}>
                             {item}
                         </li>
                         )
@@ -39,14 +39,14 @@ const Experience = () => {
 
     return (
         <div className='my-64 flex flex-col justify-center items-center'>
-            <h2 className='font-bold text-8xl mb-32 w-full text-center'>
+            <h2 className='font-bold text-8xl mb-32 w-full text-center dark:text-light'>
                 What I've Been Up To
             </h2>
 
             <div ref={ref} className='w-full relative flex flex-col items-center'>
 
                 <motion.div 
-                className='absolute left-8 top-0 w-[4px] h-full bg-dark origin-top'
+                className='absolute left-8 top-0 w-[4px] h-full bg-dark origin-top dark:bg-light'
                 style={{scaleY: scrollYProgress}}
                 />
 

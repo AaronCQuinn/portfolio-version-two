@@ -11,20 +11,28 @@ import { motion } from 'framer-motion'
 
 const FeaturedProject = ({ type, title, summary, img, link, ghLink }) => {
     return (
-        <article className='w-full flex items-center justify-between rounded-3xl border border-solid border-dark bg-light shadow-2xl p-2 relative rounded-br-3xl'>
-            <div className='absolute top-0 -right-3 -z-10 w-[100.5%] h-[103%] rounded-[2.6rem] bg-dark'/>
+        <article className='w-full flex items-center justify-between rounded-3xl border border-solid 
+        border-dark bg-light shadow-2xl p-2 relative rounded-br-3xl
+        dark:border-light
+        dark:bg-dark
+        '>
+            <div className='absolute top-0 -right-2 -z-10 w-[100.5%] h-[102%] rounded-[1.8rem] bg-dark dark:bg-light'/>
             <Link className='w-1/2 cursor-pointer overflow-hidden rounded-3xl' href={link} target={'_blank'}>
-                <motion.img whileHover={{scale: .98}} src={img.src} alt={title} className='w-full h-auto rounded-3xl' />
+                <motion.img whileHover={{scale: .98}} src={img.src} alt={title} className='w-full h-auto rounded-3xl'               
+                priority
+                sizes="(max-width: 768px) 100vw,
+                (max-width: 1200px) 50vw,
+                50vw" />
             </Link>
 
             <div className='flex flex-col items-start justify-between pl-6 '>
-                <span className='font-medium text-xl'>{type}</span>
-                <Link href={link} target={'_blank'} className=' transition-colors hover:underline underline-offset-2 text-linkBlue'>
-                    <h2 className='my-2 w-full text-left text-4xl font-bold'>
+                <span className='font-medium text-xl dark:text-light'>{type}</span>
+                <Link href={link} target={'_blank'} className=' transition-colors hover:underline underline-offset-2 dark:text-light'>
+                    <h2 className='my-2 w-full text-left text-4xl font-bold dark:text-light'>
                         {title}
                     </h2>
                 </Link>
-                <p className='my-2 font-medium text-dark'>
+                <p className='my-2 font-medium text-dark dark:text-light/75'>
                     {summary}
                 </p>
 
@@ -32,7 +40,25 @@ const FeaturedProject = ({ type, title, summary, img, link, ghLink }) => {
                     <Link href={ghLink} target={'_blank'} className='w-10'>
                         <GithubIcon />
                     </Link>
-                    <Link href={link} target={'_blank'} className='ml-4 rounded bg-dark text-light p-2 px-6 text-lg transition-colors font-semibold hover:bg-light border border-dark hover:text-dark'>
+                    <Link href={link} target={'_blank'} className='ml-4 
+                    rounded 
+                    bg-dark 
+                    text-light 
+                    p-2 
+                    px-6 
+                    text-lg 
+                    transition 
+                    font-semibold 
+                    border 
+                    border-dark 
+                    hover:bg-light 
+                    hover:text-dark
+                    dark:bg-light
+                    dark:text-dark
+                    dark:hover:border-light
+                    dark:hover:bg-dark
+                    dark:hover:text-light
+                    '>
                         Visit Project
                     </Link>
                 </div>
@@ -43,20 +69,20 @@ const FeaturedProject = ({ type, title, summary, img, link, ghLink }) => {
 
 const Project = ({ title, type, img, link, summary, ghLink }) => {
     return (
-        <article className='w-full flex flex-col items-center just rounded-2xl border border-solid border-dark bg-light p-6 relative'>
-            <div className='absolute top-0 -right-3 -z-10 w-[100.5%] h-[102%] rounded-[2rem] bg-dark'/>
+        <article className='w-full flex flex-col items-center just rounded-2xl border border-solid border-dark bg-light p-6 relative dark:bg-dark dark:border-light'>
+            <div className='absolute top-0 -right-2 -z-10 w-[100.5%] h-[101%] rounded-3xl bg-dark dark:bg-light'/>
             <Link className='w-full cursor-pointer overflow-hidden rounded-3xl' href={link} target={'_blank'}>
                 <motion.img whileHover={{scale: .98}} src={img.src} alt={title} className='w-full rounded-3xl h-[425px]' />
             </Link>
 
             <div className='w-full flex flex-col items-start justify-between pl-6 mt-2'>
-                <span className='font-medium text-xl'>{type}</span>
-                <Link href={link} target={'_blank'} className=' transition-colors hover:underline underline-offset-2 text-linkBlue'>
+                <span className='font-medium text-xl dark:text-light'>{type}</span>
+                <Link href={link} target={'_blank'} className=' transition-colors hover:underline underline-offset-2 dark:text-light text-dark'>
                     <h2 className='my-2 w-full text-left text-3xl font-bold'>
                         {title}
                     </h2>
                 </Link>
-                <p className='my-2 font-medium text-dark'>
+                <p className='my-2 font-medium text-dark dark:text-light/75'>
                     {summary}
                 </p>
 
@@ -64,7 +90,7 @@ const Project = ({ title, type, img, link, summary, ghLink }) => {
                     <Link href={ghLink} target={'_blank'} className='w-8'>
                         <GithubIcon />
                     </Link>
-                    <Link href={link} target={'_blank'} className='ml-4 rounded font-semibold underline'>
+                    <Link href={link} target={'_blank'} className='ml-4 rounded font-semibold underline dark:text-light'>
                         Visit Project
                     </Link>
                 </div>

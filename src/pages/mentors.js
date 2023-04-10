@@ -9,16 +9,21 @@ import Image from 'next/image'
 
 const MentorArticle = ({ name, module, feedback, title, src }) => {
     return (
-        <li className='relative w-full p-4 my-4 rounded-xl flex items-center justify-between bg-light text-dark first:mt-0 border border-solid border-dark border-r-4 border-b-4'>
-            <Image src={src} className='w-1/12 mr-4 rounded-xl border border-dark' />
+        <li className='relative w-full p-4 my-4 rounded-xl flex items-center justify-between bg-light text-dark dark:bg-dark dark:text-light/75 dark:border-light first:mt-0 border border-solid border-dark border-r-4 border-b-4'>
+            <Image src={src} className='w-1/12 mr-4 rounded-xl border border-dark'
+            priority
+            sizes="(max-width: 768px) 100vw,
+            (max-width: 1200px) 50vw,
+            50vw"
+            />
             <div className=' w-11/12 '>
-                <h2 className='capitalize text-xl font-bold mb-2'>
+                <h2 className='capitalize text-xl font-bold mb-2 dark:text-light text-dark'>
                     {name + " - "}
                     <span className='font-semibold'>{title}</span>
                 </h2>
                 <div>{feedback}</div>
             </div>
-            <div className='w-1/12 text-xl flex justify-center text-center text-linkBlue font-semibold pl-4'>{module}</div>
+            <div className='w-1/12 text-xl flex justify-center text-center text-dark dark:text-light font-semibold pl-4'>{module}</div>
         </li>
     )
 }
@@ -35,7 +40,7 @@ const mentors = () => {
         <Layout className='pt-16'>
             <AnimatedText className='mb-8' text={"Some Help Along The Way"} />
 
-            <div className={`flex bg-dark h-full border-2 border-dark p-6 items-center gap-2 w-3/4 text-light mx-auto mb-16`}>
+            <div className={`flex bg-dark h-full border-2 border-dark p-6 items-center gap-2 w-3/4 text-light mx-auto mb-16 dark:text-dark dark:bg-light font-semibold`}>
                 In the Get Coding program, which is based in St. John's, students learn web development concepts through practical application. Each student is paired with a senior member of the local tech industry, and together they collaborate on creating a portfolio project that is seen through to completion. Below is a list of the mentors I had the privilege of working with, along with their feedback on my work.
             </div>
             <MentorArticle 

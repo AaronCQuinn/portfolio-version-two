@@ -24,40 +24,40 @@ const about = () => {
                 <div className='grid w-full grid-cols-8 gap-16'>
 
                     <div className='col-span-3 flex flex-col justify-start'>
-                        <h2 className='mb-4 text-lg font-bold uppercase text-dark/75'>
+                        <h2 className='mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75'>
                             About Me
                         </h2>
-                        <p className='font-medium'>
+                        <p className='font-medium dark:text-light/75'>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate alias placeat, ea ab optio numquam. Quibusdam inventore iusto consequatur libero minus vel fuga sequi eum! Totam molestiae at sit maiores! Consectetur quo suscipit dignissimos, vero veritatis a, numquam, aut placeat minus illo consequatur doloremque corrupti! Ducimus tempora voluptas nihil maxime!
                         </p>
-                        <p className='font-medium my-4'>
+                        <p className='font-medium my-4 dark:text-light/75'>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate alias placeat, ea ab optio numquam. Quibusdam inventore iusto consequatur libero minus vel fuga sequi eum! Totam molestiae at sit maiores! Consectetur quo suscipit dignissimos, vero veritatis a, numquam, aut placeat minus illo consequatur doloremque corrupti! Ducimus tempora voluptas nihil maxime!
                         </p>
-                        <p className='font-medium'>
+                        <p className='font-medium dark:text-light/75'>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate alias placeat, ea ab optio numquam. Quibusdam inventore iusto consequatur libero minus vel fuga sequi eum! Totam molestiae at sit maiores! Consectetur quo suscipit dignissimos, vero veritatis a, numquam, aut placeat minus illo consequatur doloremque corrupti! Ducimus tempora voluptas nihil maxime!
                         </p>
                     </div>
                     
-                    <div className='justify-center col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8'>
-                        <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark'/>
+                    <div className='justify-center col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8 dark:bg-dark dark:border-light'>
+                        <div className='absolute top-0 -right-2 -z-10 w-[102%] h-[101.5%] rounded-3xl bg-dark dark:bg-light'/>
                         <Image src={HeroImage} alt='Aaron Quinn' className='w-full h-auto rounded-2xl' />
                     </div>
 
                     <div className='col-span-2 flex flex-col items-center justify-between'>
                 
                         <div className='flex flex-col items-center justify-center'>
-                            <span className='inline-block text-7xl font-bold'><AnimatedNumbers value={10}/>+</span>
-                            <h2 className='text-xl font-medium capitalize text-dark/75'>projects completed</h2>
+                            <span className='inline-block text-7xl font-bold dark:text-light'><AnimatedNumbers className='dark:text-light' value={10}/>+</span>
+                            <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light/75'>projects completed</h2>
                         </div>
 
                         <div className='flex flex-col items-center justify-center'>
-                            <span className='inline-block text-7xl font-bold'><AnimatedNumbers value={3} />+</span>
-                            <h2 className='text-xl font-medium capitalize text-dark/75'>Local Mentors</h2>
+                            <span className='inline-block text-7xl font-bold dark:text-light'><AnimatedNumbers value={3} className='dark:text-light' />+</span>
+                            <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light'>Local Mentors</h2>
                         </div>
 
                         <div className='flex flex-col items-center justify-center'>
-                            <span className='inline-block text-7xl font-bold'><AnimatedNumbers value={2}/>+</span>
-                            <h2 className='text-xl font-medium capitalize text-dark/75'>years of experience</h2>
+                            <span className='inline-block text-7xl font-bold dark:text-light'><AnimatedNumbers value={2} className='dark:text-light'/>+</span>
+                            <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light'>years of experience</h2>
                         </div>
 
                     </div>

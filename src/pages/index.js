@@ -36,7 +36,11 @@ export default function Home() {
             <Image src={Aaron} 
               alt="Aaron" 
               className="rounded-lg" 
-              style={{ boxShadow: '0 6px 8px rgba(0, 0, 0, 0.7), 0 10px 16px rgba(0, 0, 0, 0.9)' }} 
+              style={{ boxShadow: '0 6px 8px rgba(0, 0, 0, 0.7), 0 10px 16px rgba(0, 0, 0, 0.9)' }}
+              priority
+              sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              50vw"
             />
           </motion.div>
         </div>

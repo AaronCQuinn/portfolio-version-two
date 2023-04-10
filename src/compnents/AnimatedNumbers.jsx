@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useInView, useMotionValue, useSpring } from 'framer-motion';
 import { useRef } from 'react';
 
-export const AnimatedNumbers = ({ value }) => {
+export const AnimatedNumbers = ({ value, className='' }) => {
 
     const ref = useRef(null);
     const motionValue = useMotionValue(0);
@@ -23,5 +23,5 @@ export const AnimatedNumbers = ({ value }) => {
         });
     });
 
-    return <span ref={ref}> </span>;
+    return <span ref={ref} className={`${className}`}> </span>;
 };
