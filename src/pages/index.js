@@ -5,6 +5,8 @@ import AnimatedText from "@/compnents/AnimatedText";
 import { motion } from 'framer-motion'
 import Link from "next/link";
 import HirePrompt from "@/compnents/HirePrompt";
+import Transition from "@/compnents/Transition";
+import Head from "next/head";
 
 export default function Home() {
 
@@ -21,6 +23,11 @@ export default function Home() {
   }
 
   return (
+    <>
+    <Head>
+      <title>Aaron Quinn | Portfolio</title>
+      <meta name='description' content='Aaron Quinns portfolio'></meta>
+    </Head>
     <main className="flex items-center text-dark w-full min-h-screen dark:text-light">
       <Layout className="pt-0 md:pt-16 sm:pt-8">
         <div className="flex items-center w-full lg:flex-col lg:w-full lg:gap-4">
@@ -70,5 +77,6 @@ export default function Home() {
 
       <HirePrompt />
     </main>
+    </>
   )
 }

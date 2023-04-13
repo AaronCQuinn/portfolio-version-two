@@ -4,6 +4,8 @@ import Navbar from '@/compnents/Navbar';
 import Head from 'next/head';
 import '@/styles/checkmark.css'
 import { ThemeContextProvider } from '@/context/ThemeContext';
+import { AnimatePresence } from 'framer-motion';
+import { useRouter } from 'next/router';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -22,8 +24,9 @@ Some examples:
 */
 
 export default function App({ Component, pageProps }) {
+  const router = useRouter();
   return (
-    // Important 
+
     <>
       <Head>
         <title>Aaron Quinn | Portfolio</title>
@@ -32,7 +35,9 @@ export default function App({ Component, pageProps }) {
       <main className={`${montserrat.variable} dark:bg-dark font-mont bg-light w-full min-h-screen`}>
         <ThemeContextProvider>
           <Navbar />
-          <Component {...pageProps} />
+          <AnimatePresence mode='wait'>
+            <Component key={router.asPath} {...pageProps} />
+          </AnimatePresence>
         </ThemeContextProvider>
       </main>
     </>

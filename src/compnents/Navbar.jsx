@@ -62,6 +62,17 @@ const Navbar = () => {
         setIsOpen(!isOpen);
     }
 
+    const handleThemeChange = () => {
+        if (theme === 'dark') {
+            localStorage.setItem('theme', 'light');
+            setTheme('light')
+            return;
+        }
+
+        localStorage.setItem('theme', 'dark');
+        setTheme('dark');
+    }
+
     return (
         <header className='w-full px-32 lg:px-16 py-9 font-medium flex items-center justify-between border-solid border-b-[2.5px] dark:text-light relative'>
             <button className='flex-col justify-center items-center hidden lg:flex lg:py-2' onClick={handleOpen}>
@@ -87,7 +98,7 @@ const Navbar = () => {
                     </motion.a>
 
                     <button
-                    onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                    onClick={() => handleThemeChange()}
                     className={`flex items-center justify-center rounded-full p-1 ${theme === 'light' ? 'bg-dark text-light' : 'bg-light text-dark'}`}
                     >
                         {

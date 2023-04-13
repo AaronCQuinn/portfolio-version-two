@@ -3,12 +3,10 @@ import React, { createContext, useEffect, useState } from 'react'
 const ThemeContext = createContext();
 
 const ThemeContextProvider = ({ children }) => {
-    const [theme, setTheme] = useState('dark');
+    const [theme, setTheme] = useState('');
 
     useEffect(() => {
-        if (window.matchMedia('(prefers-color-scheme:dark)').matchs) {
-            setTheme('dark');
-        }
+        localStorage.getItem('theme') === 'dark' ? setTheme('dark') : setTheme('light');
     }, [])
 
     useEffect(() => {
