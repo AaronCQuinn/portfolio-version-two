@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 const Transition = () => {
-  const duration = 0.7;
+  const duration = 0.5;
   return (
     <>
       <motion.div className='fixed top-0 bottom-0 right-full w-screen h-screen z-20  bg-dark/100' 

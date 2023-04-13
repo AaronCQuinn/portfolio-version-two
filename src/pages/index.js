@@ -54,10 +54,11 @@ export default function Home() {
 
         <div className="w-1/2 lg:w-full flex flex-col items-center self-center">
           <h1>
-            <AnimatedText text='Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, minus.' className="!text-6xl !text-left xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl" />
+            <AnimatedText text='Hello.' className="!text-8xl !text-left xl:!text-8xl lg:!text-center lg:!text-8xl md:!text-8xl sm:!text-6xl" />
+            <AnimatedText text='My name is Aaron Quinn.' className="!text-6xl !text-left xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl" />
           </h1>
           <p className="my-4 text-base font-medium">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum deserunt quo neque, harum architecto placeat enim a iusto tempora adipisci, fuga ab at quia quod voluptatibus mollitia temporibus accusantium fugiat!
+            As of 2023, I am looking to merge my passion for software development into my career path and find meaningful employment in St. John's local tech industry.
           </p>
 
           <div className="flex items-center self-start mt-2 gap-4 lg:self-center">

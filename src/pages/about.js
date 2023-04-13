@@ -19,7 +19,7 @@ const about = () => {
 
         <main className='flex w-full flex-col items-center justify-center'>
             <Layout className='pt-16'>
-                <AnimatedText text='Lorem Ipsum Placeholder' className='mb-16 lg:mb-8 lg:!text-6xl sm:!text-4xl xs:!text-2xl '/>
+                <AnimatedText text='About Myself' className='mb-16 lg:mb-8 lg:!text-6xl sm:!text-4xl xs:!text-2xl '/>
 
                 <div className='grid w-full grid-cols-8 gap-16 sm:gap-8'>
 
@@ -28,13 +28,16 @@ const about = () => {
                             About Me
                         </h2>
                         <p className='font-medium dark:text-light/75'>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate alias placeat, ea ab optio numquam. Quibusdam inventore iusto consequatur libero minus vel fuga sequi eum! Totam molestiae at sit maiores! Consectetur quo suscipit dignissimos, vero veritatis a, numquam, aut placeat minus illo consequatur doloremque corrupti! Ducimus tempora voluptas nihil maxime!
+                            During the final semester of my Bachelor of Commerce, I filled a mandatory elective slot with the Introduction to Computer programming within Memorial's computer science faculty.
                         </p>
                         <p className='font-medium my-4 dark:text-light/75'>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate alias placeat, ea ab optio numquam. Quibusdam inventore iusto consequatur libero minus vel fuga sequi eum! Totam molestiae at sit maiores! Consectetur quo suscipit dignissimos, vero veritatis a, numquam, aut placeat minus illo consequatur doloremque corrupti! Ducimus tempora voluptas nihil maxime!
+                            This course served as a catalyst into my interest in software development. After graduating directly into the beginning of the covid pandemic, I dedicated the spare time I had while the job market recovered into self-teaching myself the basic concepts of OOP by developing in Java.
+                        </p>
+                        <p className='font-medium mb-4 dark:text-light/75'>
+                            In May 2021, I joined the local Get Coding group based here in St. John's where I learned web development concepts from the basics of HTML, CSS, and JavaScript to developing webpages and servers in both React and Node.js.
                         </p>
                         <p className='font-medium dark:text-light/75'>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate alias placeat, ea ab optio numquam. Quibusdam inventore iusto consequatur libero minus vel fuga sequi eum! Totam molestiae at sit maiores! Consectetur quo suscipit dignissimos, vero veritatis a, numquam, aut placeat minus illo consequatur doloremque corrupti! Ducimus tempora voluptas nihil maxime!
+                            Although I withdrew from the program in December of 2021 due to changes in my finances, I still pressed on in self-teaching to accrue more knowledge through practically applying myself in developing personal projects. Through my persistence, I am confident I can bring value to your organization as a Junior Developer.
                         </p>
                     </div>
                     
