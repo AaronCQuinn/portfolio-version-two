@@ -58,7 +58,7 @@ export default function Home() {
             <AnimatedText text='My name is Aaron Quinn.' className="!text-6xl !text-left xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl" />
           </h1>
           <p className="my-4 text-base font-medium">
-            As of 2023, I am looking to merge my passion for software development into my career path and find meaningful employment in St. John's local tech industry.
+            As of 2023, I am looking to merge my passion for software development into my career path and find meaningful employment in St. John&apos;s local tech industry.
           </p>
 
           <div className="flex items-center self-start mt-2 gap-4 lg:self-center">

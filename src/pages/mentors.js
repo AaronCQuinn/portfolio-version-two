@@ -41,7 +41,7 @@ const mentors = () => {
             <AnimatedText className='mb-8 lg:mb-8 lg:!text-6xl sm:!text-4xl xs:!text-2xl' text={"Some Help Along The Way"} />
 
             <div className={`flex bg-dark h-full border-2 border-dark p-6 items-center gap-2 w-3/4 lg:w-full text-light mx-auto mb-16 dark:text-dark dark:bg-light font-semibold`}>
-                In the Get Coding program, which is based in St. John's, students learn web development concepts through practical application. Each student is paired with a senior member of the local tech industry, and together they collaborate on creating a portfolio project that is seen through to completion. Below is a list of the mentors I had the privilege of working with, along with their feedback on my work.
+                In the Get Coding program, which is based in St. John&apos;s, students learn web development concepts through practical application. Each student is paired with a senior member of the local tech industry, and together they collaborate on creating a portfolio project that is seen through to completion. Below is a list of the mentors I had the privilege of working with, along with their feedback on my work.
             </div>
             <MentorArticle 
                 module={'React'} 

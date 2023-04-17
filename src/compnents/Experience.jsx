@@ -40,7 +40,7 @@ const Experience = () => {
     return (
         <div className='my-64 lg:my-32 flex flex-col justify-center items-center'>
             <h2 className='font-bold text-8xl mb-32 w-full text-center dark:text-light lg:mb-8 lg:!text-6xl sm:!text-4xl xs:!text-2xl'>
-                What I've Been Up To
+                What I&apos;ve Been Up To
             </h2>
 
             <div ref={ref} className='w-full relative flex flex-col items-center'>
