@@ -90,10 +90,10 @@ const Navbar = () => {
                 </nav>
 
                 <nav className='flex gap-4 items-center justify-center flex-wrap'>
-                    <motion.a href='/' target={"_blank"} whileHover={{y: -3}} whileTap={{scale: 0.9}}>
+                    <motion.a href='https://github.com/AaronCQuinn?tab=repositories' target={"_blank"} whileHover={{y: -3}} whileTap={{scale: 0.9}}>
                         <GithubIcon bgFill={theme === 'dark' ? '#fff' : '#121212'}/>
                     </motion.a>
-                    <motion.a href='/' target={"_blank"} whileHover={{y: -3}} whileTap={{scale: 0.9}}>
+                    <motion.a href='https://www.linkedin.com/in/aaron-quinn/' target={"_blank"} whileHover={{y: -3}} whileTap={{scale: 0.9}}>
                         <LinkedInIcon bgFill={theme === 'dark' ? '#fff' : '#121212'} />
                     </motion.a>
 

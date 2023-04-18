@@ -114,7 +114,7 @@ const projects = () => {
             <meta name='description' content='Information about Aaron Quinn and his journey to software development.' />
         </Head>
 
-        <main className='w-full flex flex-col items-center justify-center'>
+        <main className='w-full flex flex-col items-center justify-center pb-32'>
             <Layout>
                 <AnimatedText text={"My Recent Works"} className='mb-16 !text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl'/>
                 

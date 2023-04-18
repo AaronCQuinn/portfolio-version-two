@@ -28,8 +28,8 @@ export default function Home() {
       <title>Aaron Quinn | Portfolio</title>
       <meta name='description' content='Aaron Quinns portfolio'></meta>
     </Head>
-    <main className="flex items-center text-dark w-full min-h-screen dark:text-light">
-      <Layout className="pt-0 md:pt-16 sm:pt-8">
+    <main className="flex items-center text-dark w-full dark:text-light">
+      <Layout className="md:pt-16 sm:pt-8 !pb-0">
         <div className="flex items-center w-full lg:flex-col lg:w-full lg:gap-4">
 
         <div className="w-1/2 flex justify-center">
@@ -57,7 +57,7 @@ export default function Home() {
             <AnimatedText text='Hello.' className="!text-8xl !text-left xl:!text-8xl lg:!text-center lg:!text-8xl md:!text-8xl sm:!text-6xl" />
             <AnimatedText text='My name is Aaron Quinn.' className="!text-6xl !text-left xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl" />
           </h1>
-          <p className="my-4 text-base font-medium">
+          <p className="my-4 text-base font-medium sm:text-center">
             As of 2023, I am looking to merge my passion for software development into my career path and find meaningful employment in St. John&apos;s local tech industry.
           </p>
 

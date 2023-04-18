@@ -9,8 +9,8 @@ import Image from 'next/image'
 
 const MentorArticle = ({ name, module, feedback, title, src }) => {
     return (
-        <li className='relative w-full p-4 my-4 rounded-xl flex lg:flex-col lg:gap-4 items-center justify-between bg-light text-dark dark:bg-dark dark:text-light/75 dark:border-light first:mt-0 border border-solid border-dark border-r-4 border-b-4'>
-            <Image src={src} className='w-1/12 lg:mr-0 mr-4 rounded-xl border border-dark lg:w-6/12'
+        <li className='relative w-4/5 mx-auto p-4 my-4 rounded-xl flex lg:flex-col lg:gap-4 items-center justify-between bg-light text-dark dark:bg-dark dark:text-light/75 dark:border-light first:mt-0 border border-solid border-dark border-r-4 border-b-4'>
+            <Image src={src} className='w-2/12 lg:mr-0 mr-4 rounded-xl border border-dark lg:w-6/12'
             priority
             sizes="(max-width: 768px) 100vw,
             (max-width: 1200px) 50vw,
@@ -23,7 +23,7 @@ const MentorArticle = ({ name, module, feedback, title, src }) => {
                 </h2>
                 <div>{feedback}</div>
             </div>
-            <div className='w-1/12 lg:w-full lg:pl-0 text-xl flex justify-center text-center text-dark dark:text-light font-semibold pl-4'>{module}</div>
+            <div className='w-1/12 lg:w-full lg:pl-0 text-xl flex justify-center text-center text-dark dark:text-light font-semibold mx-4'>{module}</div>
         </li>
     )
 }
@@ -37,7 +37,7 @@ const mentors = () => {
     </Head>
 
     <main>
-        <Layout className='pt-16'>
+        <Layout className='pt-16 pb-32'>
             <AnimatedText className='mb-8 lg:mb-8 lg:!text-6xl sm:!text-4xl xs:!text-2xl' text={"Some Help Along The Way"} />
 
             <div className={`flex bg-dark h-full border-2 border-dark p-6 items-center gap-2 w-3/4 lg:w-full text-light mx-auto mb-16 dark:text-dark dark:bg-light font-semibold`}>
@@ -58,7 +58,7 @@ const mentors = () => {
                 title={"Software Developer, PointClickCare"}
             />
             <MentorArticle 
-                module={'HTML, CSS, Javascript'} 
+                module={'HTML CSS Javascript'} 
                 src={Shiwei}
                 feedback={"Aaron is an independent learner and eager to put hands down to build things, and also knows when to ask for help when blocked. Aaron had already eastablished a good foundation of learning Java himself before meeting me, which really helped him understand some of the fundamentals of Javascript."}
                 name={'Shiwei Han'}
