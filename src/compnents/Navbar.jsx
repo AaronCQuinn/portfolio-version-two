@@ -133,7 +133,7 @@ const Navbar = () => {
                         <GithubIcon bgFill={theme === 'dark' ? '#fff' : '#121212'}/>
                     </motion.a>
                     <motion.a href={LINKEDIN_LINK} target={"_blank"} whileHover={{y: -3}} whileTap={{scale: 0.9}}>
-                        <LinkedInIcon bgFill={theme === 'dark' ? '#121212': '#fff'} />
+                        <LinkedInIcon className={'!w-[1.5em] !h-[1.5em]'} bgFill={theme === 'dark' ? '#121212': '#fff'} />
                     </motion.a>
 
                     <button
