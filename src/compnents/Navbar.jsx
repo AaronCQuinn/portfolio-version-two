@@ -130,7 +130,7 @@ const Navbar = () => {
 
                 <nav className='flex gap-4 lg:gap-6 items-center justify-center flex-wrap'>
                     <motion.a href={GITHUB_LINK} target={"_blank"} whileHover={{y: -3}} whileTap={{scale: 0.9}}>
-                        <GithubIcon bgFill={theme === 'dark' ? '#fff' : '#121212'}/>
+                        <GithubIcon bgFill={theme === 'dark' ? '#fff' : '#121212'} className={'!w-[1.5em] !h-[1.5em]'}/>
                     </motion.a>
                     <motion.a href={LINKEDIN_LINK} target={"_blank"} whileHover={{y: -3}} whileTap={{scale: 0.9}}>
                         <LinkedInIcon className={'!w-[1.5em] !h-[1.5em]'} bgFill={theme === 'dark' ? '#121212': '#fff'} />
@@ -142,9 +142,9 @@ const Navbar = () => {
                     >
                         {
                             theme === 'dark' ?
-                            <SunIcon className='dark:fill-light fill-dark' />
+                            <SunIcon className='dark:fill-light fill-dark !w-[1.5em] !h-[1.5em]' />
                             :
-                            <MoonIcon className='dark:fill-light fill-dark' />
+                            <MoonIcon className='dark:fill-light fill-dark !w-[1.5em] !h-[1.5em]' />
                         }
                     </button>
                 </nav>
