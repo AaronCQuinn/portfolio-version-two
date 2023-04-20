@@ -57,6 +57,8 @@ const CustomMobileLink = ({ href, title, toggle }) => {
 const Navbar = () => {
     const { theme, setTheme } = useContext(ThemeContext);
     const [isOpen, setIsOpen] = useState(false);
+    const GITHUB_LINK = 'https://github.com/AaronCQuinn?tab=repositories'
+    const LINKEDIN_LINK = 'https://www.linkedin.com/in/aaron-quinn/'
 
     const handleOpen = () => {
         setIsOpen(!isOpen);
@@ -75,7 +77,7 @@ const Navbar = () => {
 
     return (
         <header className='w-full px-32 lg:px-16 py-9 font-medium flex items-center justify-between border-solid border-b-[2.5px] dark:text-light relative'>
-            <button className='flex-col justify-center items-center hidden lg:flex lg:py-2' onClick={handleOpen}>
+            <button className='flex-col justify-center items-center hidden lg:flex lg:py-2' onClick={() => handleOpen()}>
                 <span className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isOpen ? "rotate-45 translate-y-1" : '-translate-y-0.5'}`}></span>    
                 <span className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${isOpen ? 'opacity-0' : 'opacity-100'}`}></span>    
                 <span className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isOpen ? "-rotate-45 -translate-y-1" : 'translate-y-0.5'}`}></span>    
@@ -90,10 +92,10 @@ const Navbar = () => {
                 </nav>
 
                 <nav className='flex gap-4 items-center justify-center flex-wrap'>
-                    <motion.a href='https://github.com/AaronCQuinn?tab=repositories' target={"_blank"} whileHover={{y: -3}} whileTap={{scale: 0.9}}>
+                    <motion.a href={GITHUB_LINK} target={"_blank"} whileHover={{y: -3}} whileTap={{scale: 0.9}}>
                         <GithubIcon bgFill={theme === 'dark' ? '#fff' : '#121212'}/>
                     </motion.a>
-                    <motion.a href='https://www.linkedin.com/in/aaron-quinn/' target={"_blank"} whileHover={{y: -3}} whileTap={{scale: 0.9}}>
+                    <motion.a href={LINKEDIN_LINK} target={"_blank"} whileHover={{y: -3}} whileTap={{scale: 0.9}}>
                         <LinkedInIcon bgFill={theme === 'dark' ? '#fff' : '#121212'} />
                     </motion.a>
 
@@ -127,10 +129,10 @@ const Navbar = () => {
                 </nav>
 
                 <nav className='flex gap-4 lg:gap-6 items-center justify-center flex-wrap'>
-                    <motion.a href='/' target={"_blank"} whileHover={{y: -3}} whileTap={{scale: 0.9}}>
+                    <motion.a href={GITHUB_LINK} target={"_blank"} whileHover={{y: -3}} whileTap={{scale: 0.9}}>
                         <GithubIcon bgFill={theme === 'dark' ? '#fff' : '#121212'}/>
                     </motion.a>
-                    <motion.a href='/' target={"_blank"} whileHover={{y: -3}} whileTap={{scale: 0.9}}>
+                    <motion.a href={LINKEDIN_LINK} target={"_blank"} whileHover={{y: -3}} whileTap={{scale: 0.9}}>
                         <LinkedInIcon bgFill={theme === 'dark' ? '#121212': '#fff'} />
                     </motion.a>
 

@@ -4,7 +4,7 @@ import { useScroll, motion } from 'framer-motion'
 const Details = ({ position, company, companyLink, time, address, work }) => {
     return (
         <li className='my-8 first:mt-0 last:mb-0 mx-auto flex flex-col items-center justify-between min-w-full md:w-[80%]'>
-            <motion.div className='w-full '
+            <motion.div className='w-full'
             initial={{y:50}}
             whileInView={{y:0}}
             trainsition={{duration: .5, type: "spring"}}
@@ -38,7 +38,7 @@ const Experience = () => {
     const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "-200px start"] });
 
     return (
-        <div className='my-64 lg:my-32 flex flex-col justify-center items-center'>
+        <div className='my-32 lg:my-32 flex flex-col justify-center items-center'>
             <h2 className='font-bold text-8xl mb-32 w-full text-center dark:text-light lg:mb-8 lg:!text-6xl sm:!text-4xl xs:!text-2xl'>
                 What I&apos;ve Been Up To
             </h2>
@@ -53,7 +53,7 @@ const Experience = () => {
                 <ul className='flex flex-col items-start justify-between ml-4 w-[75%]'>
                     <Details 
                         position={"Assessment Processing Officer"} 
-                        company={"Government of Canada"}
+                        company={"Gov of Canada"}
                         address={"290 Empire Avenue"}
                         time={"2020-Present"}
                         work={["Executed comprehensive reviews related to fraudulent activity on taxpayer accounts",

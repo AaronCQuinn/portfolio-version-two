@@ -52,10 +52,10 @@ export default function Home() {
           </motion.div>
         </div>
 
-        <div className="w-1/2 lg:w-full flex flex-col items-center self-center">
+        <div className="w-1/2 lg:w-full flex flex-col self-center">
           <h1>
-            <AnimatedText text='Hello.' className="!text-8xl !text-left xl:!text-8xl lg:!text-center lg:!text-8xl md:!text-8xl sm:!text-6xl" />
-            <AnimatedText text='My name is Aaron Quinn.' className="!text-6xl !text-left xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl" />
+            <AnimatedText text='Hello' className="!text-8xl !text-left xl:!text-8xl lg:!text-center lg:!text-8xl md:!text-8xl sm:!text-6xl sm:!text-center" />
+            <AnimatedText text='My name is Aaron Quinn' className="!text-6xl !text-left xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl" />
           </h1>
           <p className="my-4 text-base font-medium sm:text-center">
             As of 2023, I am looking to merge my passion for software development into my career path and find meaningful employment in St. John&apos;s local tech industry.

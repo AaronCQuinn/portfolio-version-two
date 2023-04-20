@@ -28,6 +28,7 @@ const subText = {
 const AnimatedText = ({ text, className=''}) => {
     const ref = useRef(null);
     const isInView = useInView(ref, {once: true});
+    const textArray = text.split(" ");
     
     return (
         <div className='w-full mx-auto py-2 sm:py-0 flex items-center justify-center text-center overflow-hidden'>
@@ -39,11 +40,14 @@ const AnimatedText = ({ text, className=''}) => {
             animate={isInView ? 'animate' : 'null'}
             ref={ref}
         >
-            {text.split(" ").map((word, index) => 
+            {textArray.map((word, index) => 
             <motion.span key={word + '-' + index} className='inline-block'
             variants={subText}
             >
-                {word}&nbsp;
+                {word}
+                {
+                    index !== textArray.length - 1 && <>&nbsp;</>
+                }
             </motion.span>
             )}
         </motion.h1>

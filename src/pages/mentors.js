@@ -9,7 +9,7 @@ import Image from 'next/image'
 
 const MentorArticle = ({ name, module, feedback, title, src }) => {
     return (
-        <li className='relative w-4/5 mx-auto p-4 my-4 rounded-xl flex lg:flex-col lg:gap-4 items-center justify-between bg-light text-dark dark:bg-dark dark:text-light/75 dark:border-light first:mt-0 border border-solid border-dark border-r-4 border-b-4'>
+        <li className='relative w-4/5 sm:w-full mx-auto p-4 my-4 rounded-xl flex lg:flex-col lg:gap-4 items-center justify-between bg-light text-dark dark:bg-dark dark:text-light/75 dark:border-light first:mt-0 border border-solid border-dark border-r-4 border-b-4'>
             <Image src={src} className='w-2/12 lg:mr-0 mr-4 rounded-xl border border-dark lg:w-6/12'
             priority
             sizes="(max-width: 768px) 100vw,
